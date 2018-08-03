@@ -1,6 +1,6 @@
 <template>
   <menu id='menu'>
-    <a href='/canvas'>canvas</a>
+    <a href='/stats'>Stats</a>
     <a href='/jstoolsstats'>JS tools Stats</a>
     <a href='/blogs'>blogs</a>
     <a href='/aboutme'>about me</a>
@@ -18,12 +18,12 @@
 
 <script>
 export default {
-  name: 'CustomMenu',
+  name: "CustomMenu",
   data() {
     return {
-      message: 'right',
+      message: "right"
     };
-  },
+  }
 };
 </script>
 

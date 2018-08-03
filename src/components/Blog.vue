@@ -6,21 +6,22 @@
 </template>
 
 <script>
-import data from '../blogs.json';
+import data from "../stats.json";
 
 export default {
-  name: 'Blog',
+  name: "Blog",
   data() {
     return {
-      blogs: data,
+      blogs: data
     };
-  },
+  }
 };
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-h1, h2 {
+h1,
+h2 {
   font-weight: normal;
 }
 ul {
