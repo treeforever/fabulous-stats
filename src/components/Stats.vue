@@ -26,8 +26,8 @@
 </style>
 
 <script>
-import data from '../stats';
-import { getNextItemId } from '../helpers/utils';
+import data from '../stats.json';
+import getNextItemId from '../helpers/utils';
 
 export default {
   data() {

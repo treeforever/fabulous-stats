@@ -6,15 +6,15 @@
 </template>
 
 <script>
-import data from "../stats.json";
+import data from '../stats.json';
 
 export default {
-  name: "Blog",
+  name: 'Blog',
   data() {
     return {
-      blogs: data
+      blogs: data,
     };
-  }
+  },
 };
 </script>
 

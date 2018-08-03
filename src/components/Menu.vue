@@ -18,12 +18,12 @@
 
 <script>
 export default {
-  name: "CustomMenu",
+  name: 'CustomMenu',
   data() {
     return {
-      message: "right"
+      message: 'right',
     };
-  }
+  },
 };
 </script>
 

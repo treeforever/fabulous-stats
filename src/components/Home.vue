@@ -2,7 +2,7 @@
   <main>
     <div class='header-container'>
       <span class="header">Fabulous Stats</span>
-      <img src='../../static/umbrella.png' class="logo"/>
+      <img src='../assets/umbrella.png' class="logo"/>
     </div>
     <Stats />
   </main>
@@ -23,7 +23,7 @@
   font-size: 5em;
   font-family: 'avenir';
   font-weight: 700;
-  color: #1EA896;
+  color: #1ea896;
 }
 .logo {
   width: 10em;
@@ -38,12 +38,10 @@ import Stats from './Stats';
 export default {
   name: 'Home',
   data() {
-    return {
-
-    };
+    return {};
   },
   components: {
-    Stats
+    Stats,
   },
   methods: {
     openArticle: () => {
@@ -52,5 +50,3 @@ export default {
   },
 };
 </script>
-
-
