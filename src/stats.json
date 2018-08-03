@@ -6,6 +6,14 @@
   },
   "1": {
     "texts": "There are 635,013,559,599 possible hands in a game of bridge.",
-    "article": "games"
+    "category": "games"
+  },
+  "2": {
+    "texts": "It takes 492 seconds for sunlight to reach the Earth.",
+    "category": "science"
+  },
+  "3": {
+    "texts": "There are 293 ways to make change for a dollar.",
+    "category": "math"
   }
 }

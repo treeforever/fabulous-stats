@@ -27,18 +27,19 @@
 
 <script>
 import data from '../stats';
+import { getNextItemId } from '../helpers/utils';
 
 export default {
   data() {
     return {
-      content: data['0'].texts,
+      content: data[getNextItemId('0', 4)].texts,
     };
   },
 
   methods: {
     fetchTwitterScript() {
       fetch('https://platform.twitter.com/widgets.js');
-    }
-  }
+    },
+  },
 };
 </script>
