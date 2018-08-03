@@ -1,21 +1,6 @@
 <template>
-  <div class="hello">
-    <h1>{{ msg }}</h1>
-    <ul>
-      <li
-        v-for="(blog, index) in blogs"
-        v-bind:blog="blog"
-        v-bind:index="index"
-        v-bind:key="index"
-        v-on:click="openArticle"
-        >
-        <a :href="'blogs/' + blog.id">
-          <h3>{{ blog. title }}</h3>
-          <p>{{ blog.texts }}</p>
-        </a>
-      </li>
-
-    </ul>
+  <div class='header-container'>
+    <span class="header">Fabulous Stats</span>
   </div>
 </template>
 
@@ -24,19 +9,7 @@ export default {
   name: 'Home',
   data() {
     return {
-      msg: 'Hello Cutie!',
-      blogs: [
-        {
-          id: '0',
-          title: 'How to get your owner\'s attention?',
-          texts: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla',
-        },
-        {
-          id: '1',
-          title: 'How to get treats?',
-          texts: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla',
-        },
-      ],
+
     };
   },
   methods: {
@@ -49,27 +22,13 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-h1 {
-  font-weight: 500;
+.header-container {
+  text-align: center;
 }
-h2 {
-  font-weight: normal;
-}
-ul {
-  list-style-type: none;
-  padding: 0;
-  width: 50%;
-  margin: auto;
-}
-li {
-  display: inline-block;
-  margin: 0 1em;
-}
-li p {
-  text-align: left;
-}
-a {
-  text-decoration: none;
-  color:inherit;
+.header {
+  font-size: 5em;
+  font-family: 'avenir';
+  font-weight: 700;
+  color: #1EA896;
 }
 </style>

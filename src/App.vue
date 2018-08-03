@@ -2,15 +2,12 @@
   <div id="app">
     <Menu id='menu'></Menu>
     <main>
-      <a href='/'>
-        <img src="./assets/dog.jpg" id='dog' />
-      </a>
       <router-view/>
     </main>
   </div>
 </template>
 
-<style>
+<style scoped>
 #app {
   display: flex;
   flex-direction: row;
@@ -25,10 +22,8 @@ main {
   flex-direction: column;
   align-content: center;
 }
-#dog {
-  margin-top: auto;
-  margin-bottom: 10%;
-  justify-content: flex-start;
+#home {
+  display: flex;
 }
 </style>
 
@@ -47,17 +42,3 @@ export default {
   },
 };
 </script>
-
-<style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  /* text-align: center; */
-  color: #2c3e50;
-  margin-top: 60px;
-}
-#home {
-  display: flex;
-}
-</style>
