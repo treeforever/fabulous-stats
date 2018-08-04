@@ -5,7 +5,7 @@
       <img src='../assets/umbrella.png' class="logo"/>
     </div>
     <Stats :currentStatsId="currentStatsId"/>
-    <Button class="next-button" text="Next"  v-on:next="onNext" />
+    <NextButton class="next-button" text="Next"  v-on:next="onNext" />
   </main>
 </template>
 
@@ -41,7 +41,7 @@
 
 <script>
 import Stats from './Stats';
-import Button from './Button';
+import NextButton from './NextButton';
 import getNextItemId from '../helpers/utils';
 
 export default {
@@ -53,7 +53,7 @@ export default {
   },
   components: {
     Stats,
-    Button,
+    NextButton,
   },
   methods: {
     onNext: function() {

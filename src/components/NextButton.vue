@@ -1,5 +1,5 @@
 <template>
-  <button v-on:click="$emit('next')">{{text}}</button>
+  <button class="btn-green" v-on:click="$emit('next')">{{text}}</button>
 </template>
 
 <style>
