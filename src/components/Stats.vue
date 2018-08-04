@@ -26,19 +26,29 @@
 </style>
 
 <script>
-import data from '../stats.json';
-import getNextItemId from '../helpers/utils';
+import statsData from '../stats.json';
 
 export default {
   data() {
-    return {
-      content: data[getNextItemId('0', 5)].texts,
-    };
+    return {};
+  },
+
+  props: ['currentStatsId'],
+
+  computed: {
+    content: function() {
+      return statsData[this.currentStatsId].texts;
+    },
   },
 
   methods: {
-    fetchTwitterScript() {
-      fetch('https://platform.twitter.com/widgets.js');
+    // fetchTwitterScript() {
+    //   fetch('https://platform.twitter.com/widgets.js');
+    // },
+    onNext: function() {
+      console.log('hey hey');
+      this.currentStatsId = 1;
+      alert('fan');
     },
   },
 };

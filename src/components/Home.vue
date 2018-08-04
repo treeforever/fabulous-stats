@@ -4,7 +4,8 @@
       <span class="header">Fabulous Stats</span>
       <img src='../assets/umbrella.png' class="logo"/>
     </div>
-    <Stats />
+    <Stats :currentStatsId="currentStatsId"/>
+    <Button class="next-button" text="Next"  v-on:next="onNext" />
   </main>
 </template>
 
@@ -30,22 +31,33 @@
   margin-left: auto;
   margin-right: auto;
 }
+.next-button {
+  width: 10%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 5%;
+}
 </style>
 
 <script>
 import Stats from './Stats';
+import Button from './Button';
+import getNextItemId from '../helpers/utils';
 
 export default {
   name: 'Home',
   data() {
-    return {};
+    return {
+      currentStatsId: '0',
+    };
   },
   components: {
     Stats,
+    Button,
   },
   methods: {
-    openArticle: () => {
-      // console.log('clicked');
+    onNext: function() {
+      this.currentStatsId = getNextItemId(this.currentStatsId, 4);
     },
   },
 };
