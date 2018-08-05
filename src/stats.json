@@ -1,19 +1,57 @@
 {
   "0": {
-    "texts":
+    "text":
       "When glass breaks, the cracks move at speeds of up to 3,000 miles per hour.",
     "category": "physics"
   },
   "1": {
-    "texts": "There are 635,013,559,599 possible hands in a game of bridge.",
+    "text": "There are 635,013,559,599 possible hands in a game of bridge.",
     "category": "games"
   },
   "2": {
-    "texts": "It takes 492 seconds for sunlight to reach the Earth.",
+    "text": "It takes 492 seconds for sunlight to reach the Earth.",
     "category": "science"
   },
   "3": {
-    "texts": "There are 293 ways to make change for a dollar.",
+    "text": "There are 293 ways to make change for a dollar.",
     "category": "math"
+  },
+  "4": {
+    "text":
+      "Canada's merchandise trade deficit with the world narrowed from $2.7 billion in May to $626 million in June, the smallest deficit since January 2017. Exports increased 4.1%, while imports edged down 0.2%.",
+    "category": "Canadian international merchandise trade",
+    "time": "Canadian international merchandise trade, June 2018",
+    "validUntil": "2018-10-01T00:00:00+00:00"
+  },
+  "5": {
+    "text":
+      "In 2007, U.S. states registered largest losses through reported cyber crime. California reported a loss of more than 214 million U.S. dollars through cyber crime, almost double the amount of third-placed New York, which reported 110 million U.S. dollars of losses to the IC3.",
+    "category": "internet",
+    "url":
+      "https://www.statista.com/statistics/234993/us-states-with-the-largest-losses-through-cybercrime/"
+  },
+  "6": {
+    "title": "Digital population worldwide as of July 2018",
+    "text":
+      "Over 4.1 billion people were active internet users and 3.3 billion were social media users. China, India and the United States rank ahead all other countries in terms of internet users.",
+    "category": "internet"
+  },
+  "7": {
+    "title": "The highest internet penetration rate as of 2016",
+    "text":
+      "During the survey period, it was found that 98 percent of individuals living in Bermuda accessed the internet. The Falkland Islands were ranked first with an internet penetration of 99.02 percent.",
+    "category": "internet"
+  },
+  "8": {
+    "title": "Lowest internet penetration rate as of 2016",
+    "text":
+      "During the survey period, it was found that 1.88 percent of individuals living in Somalia accessed the internet. Eritrea was ranked first with an internet penetration of 1.18 percent.",
+    "category": "internet"
+  },
+  "9": {
+    "title": "Per capita health care spending in the United States, Canada",
+    "text":
+      "In 2015, per capita health care spending in the U.S. stood at 9,507 U.S. dollars. That was more than twice as much as per capita spending in Canada.",
+    "category": "health"
   }
 }

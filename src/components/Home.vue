@@ -40,6 +40,7 @@
 </style>
 
 <script>
+import axios from 'axios';
 import Stats from './Stats';
 import NextButton from './NextButton';
 import getNextItemId from '../helpers/utils';
@@ -56,8 +57,16 @@ export default {
     NextButton,
   },
   methods: {
-    onNext: function() {
-      this.currentStatsId = getNextItemId(this.currentStatsId, 4);
+    onNext() {
+      this.currentStatsId = getNextItemId(this.currentStatsId, 10);
+      axios
+        .get('http://localhost:3000/content?id=789098')
+        .then(function(response) {
+          console.log('get some response', response.data);
+        })
+        .catch(function(error) {
+          console.log('error: ', error);
+        });
     },
   },
 };

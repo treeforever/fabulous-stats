@@ -17,11 +17,6 @@ export default new Router({
       component: Home,
     },
     {
-      path: '/Stats',
-      name: 'Stats',
-      component: Stats,
-    },
-    {
       path: '/JSToolsStats',
       name: 'JSToolsStats',
       component: JSToolsStats,

@@ -36,8 +36,8 @@ export default {
   props: ['currentStatsId'],
 
   computed: {
-    content: function() {
-      return statsData[this.currentStatsId].texts;
+    content() {
+      return statsData[this.currentStatsId].text;
     },
   },
 
@@ -45,11 +45,6 @@ export default {
     // fetchTwitterScript() {
     //   fetch('https://platform.twitter.com/widgets.js');
     // },
-    onNext: function() {
-      console.log('hey hey');
-      this.currentStatsId = 1;
-      alert('fan');
-    },
   },
 };
 </script>
