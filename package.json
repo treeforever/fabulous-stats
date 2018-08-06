@@ -14,12 +14,13 @@
     "build": "node build/build.js"
   },
   "dependencies": {
+    "assert": "^1.4.1",
     "axios": "^0.18.0",
     "body-parser": "^1.18.3",
     "chart.js": "^2.7.2",
     "dotenv": "^6.0.0",
     "express": "^4.16.3",
-    "mongo": "^0.1.0",
+    "mongodb": "^3.1.1",
     "regenerator": "^0.12.3",
     "vue": "^2.5.2",
     "vue-async-computed": "^3.3.1",
