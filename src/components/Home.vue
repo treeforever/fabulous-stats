@@ -42,7 +42,7 @@ export default {
 
   methods: {
     onNext: async function() {
-      this.currentStatsId = getNextItemId(this.currentStatsId, 10);
+      this.currentStatsId = getNextItemId(this.currentStatsId, 13);
       this.stats = await fetchStats(this.currentStatsId);
     },
   },
