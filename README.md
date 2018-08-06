@@ -1,16 +1,24 @@
 # Fabulous Stats
 
-> A Vue.js project that present you Fabulous Stats!
+> A Vue.js project that presents you Fabulous Stats!
 
-## Build Setup
+## start the project
+
+### serve with hot reload at localhost:8080
+
+`npm run dev`
+
+### start the server at localhost:3000
+
+`npm serve`
+
+### database
+
+`MongoDB Atlas`
+
+## Build setup
 
 ```bash
-# install dependencies
-npm install
-
-# serve with hot reload at localhost:8080
-npm run dev
-
 # build for production with minification
 npm run build
 
