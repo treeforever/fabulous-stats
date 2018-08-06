@@ -7,6 +7,31 @@
   </div>
 </template>
 
+<script>
+// import statsData from '../stats.json';
+
+export default {
+  data() {
+    return {};
+  },
+
+  props: ['stats'],
+
+  computed: {
+    content() {
+      return this.stats.text;
+    },
+  },
+
+  methods: {
+    // fetchTwitterScript() {
+    //   fetch('https://platform.twitter.com/widgets.js');
+    // },
+  },
+};
+</script>
+
+
 <style>
 #dog {
   height: 10em;
@@ -25,26 +50,3 @@
 }
 </style>
 
-<script>
-import statsData from '../stats.json';
-
-export default {
-  data() {
-    return {};
-  },
-
-  props: ['currentStatsId'],
-
-  computed: {
-    content() {
-      return statsData[this.currentStatsId].text;
-    },
-  },
-
-  methods: {
-    // fetchTwitterScript() {
-    //   fetch('https://platform.twitter.com/widgets.js');
-    // },
-  },
-};
-</script>

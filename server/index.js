@@ -2,17 +2,16 @@ require('dotenv').config();
 const http = require('http');
 const express = require('express');
 const { json, urlencoded } = require('body-parser');
+const { selectDocumentById } = require('../database/mongodbClient');
 
 const app = express();
-// app.use(urlencoded({ extended: false }));
 app.use(json());
 
-// Attach the adapter to the Express application as a middleware
-// NOTE: The path must match the Request URL and/or Options URL configured in Slack
-app.get('/content', function(req, res) {
-  // console.log('req', req.query.id);
+app.get('/content', async function(req, res) {
+  const document = await selectDocumentById(Number(req.query.id));
+
   res.setHeader('Access-Control-Allow-Origin', '*');
-  res.send('hello world');
+  res.send(document);
   res.status(200);
 });
 
