@@ -10,7 +10,7 @@
 
 ### start the server at localhost:3000
 
-`npm serve`
+`npm run serve`
 
 ### database
 

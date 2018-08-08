@@ -6,12 +6,26 @@ const { selectDocumentById } = require('../database/mongodbClient');
 
 const app = express();
 app.use(json());
+app.use(function(req, res, next) {
+  res.header('Access-Control-Allow-Origin', '*');
+  res.header(
+    'Access-Control-Allow-Headers',
+    'Origin, X-Requested-With, Content-Type, Accept'
+  );
+  next();
+});
 
 app.get('/content', async function(req, res) {
   const document = await selectDocumentById(Number(req.query.id));
 
-  res.setHeader('Access-Control-Allow-Origin', '*');
   res.send(document);
+  res.status(200);
+});
+
+app.post('/votes', async function(req, res) {
+  console.log('votes', await req.body);
+
+  res.send(JSON.stringify('done'));
   res.status(200);
 });
 
