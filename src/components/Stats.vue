@@ -1,7 +1,7 @@
 <template>
   <div class='stats-container'>
     <article class="stats-content">{{ content }}</article>
-    <span>
+    <span class="votes-container">
       <span>votes {{ votes }}</span>
       <button v-on:click="upVote">up</button>
       <button v-on:click="downVote">down</button>
@@ -67,15 +67,20 @@ export default {
 }
 
 .stats-container {
-  background-color: #f5e3e0;
   margin-left: auto;
   margin-right: auto;
   min-height: 50px;
   width: 500px;
-  padding: 20px;
 }
 .stats-content {
+  background-color: #f5e3e0;
+  padding: 3% 5%;
+  border-radius: 3%;
   text-align: left;
+}
+.votes-container {
+  padding: 1%;
+  float: right;
 }
 </style>
 
