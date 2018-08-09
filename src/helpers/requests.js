@@ -2,12 +2,11 @@ const axios = require('axios');
 
 axios.defaults.headers.cross;
 
-async function sendVote(statsId, updatedVotes) {
-  await axios.post('http://localhost:3000/votes', {
-    id: '5',
+async function sendVote(id, updatedVotes) {
+  return await axios.post('http://localhost:3000/votes', {
+    id,
     votes: updatedVotes,
   });
-  return 5;
 }
 
 const a = () => 1;

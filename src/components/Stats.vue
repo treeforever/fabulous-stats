@@ -9,6 +9,7 @@
     <!-- <span>
       <a href="https://twitter.com/intent/tweet?button_hashtag=beautifulcanvas&ref_src=twsrc%5Etfw" class="twitter-hashtag-button" data-show-count="false">Tweet</a>
     </span> -->
+    <span v-if="error">Some error occured for votes</span>
   </div>
 </template>
 
@@ -18,7 +19,7 @@ import requests from '../helpers/requests';
 export default {
   data() {
     return {
-      votes: 0,
+      error: false,
     };
   },
 
@@ -28,19 +29,29 @@ export default {
     content() {
       return this.stats.text;
     },
+    votes() {
+      return this.stats.votes;
+    },
   },
 
   methods: {
-    upVote() {
-      this.votes = this.votes + 1;
-      // console.log('dd', sendVote);
-      requests.sendVote(4, this.votes);
-    },
-    downVote() {
-      if (this.votes === 0) {
-        return;
+    upVote: async function() {
+      this.error = false;
+      this.stats.votes = this.stats.votes + 1;
+      const res = await requests.sendVote(this.stats._id, this.stats.votes);
+      if (!res.data.succeeded) {
+        this.stats.votes = this.stats.votes - 1;
+        this.error = true;
       }
-      this.votes = this.votes - 1;
+    },
+    downVote: async function() {
+      this.error = false;
+      this.stats.votes = this.stats.votes - 1;
+      const res = await requests.sendVote(this.stats._id, this.stats.votes);
+      if (!res.data.succeeded) {
+        this.stats.votes = this.stats.votes + 1;
+        this.error = true;
+      }
     },
     // fetchTwitterScript() {
     //   fetch('https://platform.twitter.com/widgets.js');

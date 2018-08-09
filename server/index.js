@@ -2,7 +2,10 @@ require('dotenv').config();
 const http = require('http');
 const express = require('express');
 const { json, urlencoded } = require('body-parser');
-const { selectDocumentById } = require('../database/mongodbClient');
+const {
+  selectDocumentById,
+  updateDocumentVotes,
+} = require('../database/mongodbClient');
 
 const app = express();
 app.use(json());
@@ -23,9 +26,9 @@ app.get('/content', async function(req, res) {
 });
 
 app.post('/votes', async function(req, res) {
-  console.log('votes', await req.body);
+  const mongoResponse = await updateDocumentVotes(req.body.id, req.body.votes);
 
-  res.send(JSON.stringify('done'));
+  res.send({ succeeded: mongoResponse.modifiedCount > 0 });
   res.status(200);
 });
 
