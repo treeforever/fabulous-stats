@@ -1,3 +1,5 @@
+require('dotenv').config();
+
 const MongoClient = require('mongodb').MongoClient;
 const ObjectId = require('mongodb').ObjectId;
 const { requestStatisticsCan } = require('./statisticsAPIRequests');
@@ -5,8 +7,7 @@ const { requestStatisticsCan } = require('./statisticsAPIRequests');
 const DB = 'stats';
 const COLLECTION = 'collection1';
 
-const uri =
-  'mongodb+srv://mengqi:zmq5050-124124@stats-cluster0-lthhd.mongodb.net';
+const uri = process.env.MONGODB_URI;
 
 const selectDocumentById = async id => {
   const client = await MongoClient.connect(
